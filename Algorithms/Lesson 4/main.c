@@ -107,7 +107,7 @@ void theking()
 int main() {
 
     //---1---
-    /*int d;
+    int d;
     printf("n =  ");
     scanf("%d", &d);
     printf(" (Dec) = ");
@@ -124,7 +124,7 @@ int main() {
     //---3---
     while (scanf ("%lf %ld", &a, &b) == 2) {
         printf("%5.5lf\n", degree2 (a, b));
-    }*/
+    }
     theking();
     return 0;
 }
