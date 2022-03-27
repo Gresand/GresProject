@@ -10,10 +10,10 @@ using namespace std;
 class Power
 {
 private:
-    int first{0};
-    int second{0};
+    float first{0};
+    float second{0};
 public:
-    void SetValue(int first, int second) { this->first = first; this->second = second; };
+    void SetValue(float first, float second) { this->first = first; this->second = second; };
     void Calculate() { cout << pow(this->first,this->second) << endl; };
 };
 
@@ -87,7 +87,7 @@ public:
 int main()
 {
     //1
-    Power my1; my1.SetValue(3, 4); my1.Calculate(); cout << endl;
+    Power my1; my1.SetValue(3.15, 4.5); my1.Calculate(); cout << endl;
     //2
     RGBA my2; my2.print(); cout << endl;
     //3
