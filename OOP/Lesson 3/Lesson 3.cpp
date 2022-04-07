@@ -147,8 +147,58 @@ public:
 		std::cout << m_numerator << '/' << m_denominator;
 	}
 
-	friend Fraction operator == (Fraction a, Fraction b);
-	friend Fraction operator > (Fraction a, Fraction b);
+	bool operator== (const Fraction& fraction)
+	{
+		if (m_numerator * fraction.m_denominator == fraction.m_numerator * m_denominator)
+		{
+			return true;
+		}
+		return false;
+	}
+	bool operator!= (const Fraction& fr)
+	{
+		if (*this == fr)
+		{
+			return false;
+		}
+		return true;
+	}
+	bool operator< (const Fraction& fraction)
+	{
+		if (m_numerator * fraction.m_denominator < fraction.m_numerator * m_denominator)
+		{
+			return true;
+		}
+		return false;
+	}
+	bool operator>= (const Fraction& fraction)
+	{
+		if (*this < fraction)
+		{
+			return false;
+		}
+		return true;
+	}
+	bool operator> (const Fraction& fraction)
+	{
+		if (m_numerator * fraction.m_denominator > fraction.m_numerator * m_denominator)
+		{
+			return true;
+		}
+		return false;
+	}
+	bool operator<= (const Fraction& fraction)
+	{
+		if (*this > fraction)
+		{
+			return false;
+		}
+		return true;
+	}
+	friend std::ostream& operator<<(std::ostream& os, const Fraction& fr)
+	{
+		return os << fr.m_numerator << '/' << fr.m_denominator;
+	}
 };
 
 Fraction operator * (Fraction a, Fraction b); 
@@ -312,7 +362,6 @@ int main()
 	std::cout << "fm = "; fm.prinf(); std::cout << std::endl;
 	fdiv = f12 / f13;
 	std::cout << "fdiv = "; fdiv.prinf(); std::cout << std::endl;
-	f12 == f13;
 
 //==4==
 
