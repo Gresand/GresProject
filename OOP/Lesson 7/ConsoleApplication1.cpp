@@ -58,6 +58,11 @@ public:
         
     }
 
+    std::shared_ptr<Date> years(const std::shared_ptr<Date> a, const std::shared_ptr<Date> b)
+    {
+
+    }
+
     static void swapDate(std::shared_ptr<Date>& a,std::shared_ptr<Date>& b)
     {
         std::swap(a, b);
